@@ -1,0 +1,7 @@
+<div>
+  <ul>
+    <li *ngFor="let synonym of synonyms | async">
+      <button (click) = "applySynonym(synonym.word)">{{synonym.word}}</button>
+    </li>
+  </ul>
+</div>

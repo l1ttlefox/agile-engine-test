@@ -5,6 +5,10 @@ import { HeaderComponent } from './header/header.component';
 import { FileComponent } from './file/file.component';
 import { FooterComponent } from './footer/footer.component';
 import { TextService } from './text-service/text.service';
+import {SynonymsListComponent} from './synonyms-list/synonyms-list.component';
+import {SynonymService} from './synonym-service/synonym.service';
+import {HttpClientTestingModule} from '@angular/common/http/testing';
+import {HttpClientModule} from '@angular/common/http';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
@@ -14,9 +18,11 @@ describe('AppComponent', () => {
         ControlPanelComponent,
         HeaderComponent,
         FooterComponent,
-        FileComponent
+        FileComponent,
+        SynonymsListComponent
       ],
-      providers: [TextService]
+      imports: [HttpClientTestingModule, HttpClientModule],
+      providers: [TextService, SynonymService]
     }).compileComponents();
   }));
   it('should create the app', async(() => {

@@ -15,3 +15,13 @@
 button + button {
   margin-left: 5px;
 }
+
+.edit-button {
+  &.active {
+    background: #fff5b9;
+
+    &:hover {
+      background: #fffa98;
+    }
+  }
+}

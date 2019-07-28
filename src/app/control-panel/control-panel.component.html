@@ -1,5 +1,11 @@
 <div class="format-actions">
-  <button class="format-action" type="button"><b>B</b></button>
-  <button class="format-action" type="button"><i>I</i></button>
-  <button class="format-action" type="button"><u>U</u></button>
+  <button id="bold" class="format-action edit-button" type="button" (click)="applyChange('bold')">
+    <b>B</b>
+  </button>
+  <button id="italic" class="format-action edit-button" type="button" (click)="applyChange('italic')">
+    <i>I</i>
+  </button>
+  <button id="underline" class="format-action edit-button" type="button" (click)="applyChange('underline')">
+    <u>U</u>
+  </button>
 </div>
